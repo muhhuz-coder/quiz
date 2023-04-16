@@ -1,19 +1,20 @@
 void main(){
-  
    String number = "11222333377777";
-   int i=0,count=1;
+   int count=1;
    String numoutput='';
-for(;i<number.length;){
-   while(number[i+1]==number[i]){
+  int i=0,sum=0;
+ while(sum<number.length){
+   while(number[i]==number[i+1]){
        count++;
-       i++;
+     if(i==12)break;
+     i++;
   };
-numoutput= numoutput +'$count';
-numoutput= numoutput +"${number[i]}";
- // i=i+1;
-
+sum+=(count);
+  numoutput= numoutput +'$count';
+  numoutput= numoutput +"${number[i]}";
   count=1;
-}
+   i++;
+  };
   print(numoutput);
-    
+
 }
